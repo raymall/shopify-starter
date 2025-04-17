@@ -3,11 +3,552 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parcel Vanilla App</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Platter</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>Parcel Vanilla App</h1>
-    <p>Edit <code>src/index.html</code> to get started!</p>
+    <section class="platter py-14">
+      <div class="platter-container">
+        <div class="platter-header flex justify-center sm:justify-between items-center w-full mx-auto px-6 sm:px-32 pb-6 sm:pb-[2.375rem]">
+          <h2 class="font-source-serif font-bold sm:font-black text-[1.75rem] sm:text-[2.5rem] leading-none text-platter-black">
+            Best Sellers
+          </h2>
+          <a href="#" class="platter-button hidden md:flex justify-end items-center ml-auto px-8 py-4 font-poppins font-semibold text-sm leading-none text-platter-okra tracking-wider">
+            Shop All Best Sellers
+            <img
+              aria-hidden
+              loading="lazy" 
+              class="block ml-2 w-5 h-5"
+              src="assets/images/icon-arrow-right.svg"
+              alt="Arrow Right Icon"
+              width="20"
+              height="20"
+            >
+          </a>
+        </div>
+        <div class="platter-carousel w-full h-auto overflow-hidden">
+          <div class="js-carousel-element platter-carousel-container ps-6 sm:ps-32 pe-6 sm:pe-0 pb-3 sm:pb-16 transition-[grid-template-rows] duration-300 ease-[ease] grid grid-flow-row sm:grid-flow-col grid-cols-2 sm:grid-cols-none grid-rows-[1fr_1fr_0fr_0fr_0fr] sm:grid-rows-[auto] gap-3 sm:gap-6 sm:auto-cols-[20vw]">
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-1.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-2.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-2.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-3.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-3.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-4.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-4.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-1.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-1.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-2.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-2.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-3.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-3.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-4.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-4.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-1.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-1.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-2.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="#" class="platter-product-image block relative w-full mb-4 aspect-square rounded-[0.625rem] overflow-hidden">
+                  <img
+                    loading="lazy" 
+                    class="absolute object-cover w-full h-full z-20 transition-opacity hover:opacity-0"
+                    src="assets/images/product-2.jpg"
+                    alt="First Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <img
+                    loading="lazy"
+                    class="absolute object-cover w-full h-full pointer-none:"
+                    src="assets/images/product-3.jpg"
+                    alt="Second Image of Outside Vibes T-Shirt Sunshine"
+                    width="350"
+                    height="350"
+                  >
+                  <span class="platter-product-badge block absolute top-2 left-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-black uppercase border border-black rounded-[6.25rem] bg-white">
+                    Best Seller
+                  </span>
+                  <span class="platter-product-savingsblock absolute top-2 right-2 z-30 px-2 py-1 font-bebas-neue text-[0.5rem] sm:text-[0.625rem] leading-none tracking-wider text-platter-white uppercase border border-black rounded-[6.25rem] bg-platter-green">
+                    Save 15%
+                  </span>
+                </a>
+                <div class="platter-product-info w-full px-3">
+                  <a href="#">
+                    <h3 class="mb-2 font-bebas-neue text-base sm:text-lg leading-none tracking-wider uppercase text-platter-black-2">
+                      Outside Vibes T-Shirt Sunshine
+                    </h3>
+                  </a>
+                  <div class="platter-product-reviews">
+                    <span class="flex justify-start items-center mb-2 font-poppins text-[0.6875rem] sm:text-xs leading-none text-platter-gray">
+                      <img
+                        loading="lazy" 
+                        class="block mr-1 w-[3.3125rem] sm:w-[4.25rem] h-[0.5625rem] sm:h-[0.75rem]"
+                        src="assets/images/icon-review-stars.svg"
+                        alt="5.0 of 5.0 stars reviews on average"
+                        width="68"
+                        height="12"
+                      >
+                      1,234 Reviews
+                    </span>
+                  </div>
+                  <span class="block mb-2 font-poppins font-medium text-base leading-none text-platter-black-2">
+                    $104.95
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="platter-scrollbar hidden sm:block w-full translate-y-[-1rem] mx-auto px-6 sm:px-32 overflow-visible">
+            <div class="js-scrollbar-track platter-scrollbar-track w-full h-1 rounded-md bg-platter-gray-2 overflow-visible">
+              <button class="js-scrollbar-thumb platter-scrollbar-thumb block h-1 rounded-md hover:scale-y-175 focus:scale-y-175 bg-platter-black cursor-pointer appearance-none">
+                <span class="invisible">Scroll Thumb for Carousel</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="platter-footer w-full px-6 sm:px-32">
+          <button class="js-toggle-button relative flex sm:hidden justify-center items-center w-full px-8 py-4 font-poppins font-semibold text-base text-platter-white tracking-wider rounded-[6.25rem] bg-platter-black-2">
+            Show More
+          </button>
+        </div>
+      </div>
+    </section>
+    
+    <script type="text/javascript" src="scripts.ts"></script>
   </body>
 </html>
