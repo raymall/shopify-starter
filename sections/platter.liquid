@@ -15,7 +15,67 @@
     assign products = collection.products
   endif
 %}
-<section class="platter">
+<section class="platter my-60">
+  <div class="platter-container">
+    <div class="platter-header w-full mx-auto dynamic-padding flex justify-center sm:justify-between items-center mb-10">
+      {% if title != blank %}
+        <h2 class="px-8 font-black font-serif text-black text-6xl">{{ title }}</h2>
+      {% endif %}
+      {% if button_text != blank or button_url != blank %}
+        <a href="{{ button_url }}" class="platter-button ml-auto hidden sm:block px-8">{{ button_text }} &#8594;</a>
+      {% endif %}
+    </div>
+    {% if products %}
+      <div class="platter-carousel w-full px-8 overflow-x-hidden">
+        <div class="js-carousel-element platter-carousel-container dynamic-padding pb-12 transition-[grid-template-rows] duration-300 ease-[ease] grid grid-flow-row sm:grid-flow-col grid-cols-2 sm:grid-cols-none grid-rows-[1fr_1fr_0fr_0fr_0fr] sm:grid-rows-[auto] gap-4 sm:gap-8 sm:auto-cols-[20vw]">
+          {% for product in products limit: 10 %}
+            <div class="platter-carousel-item platter-product overflow-hidden">
+              <div class="platter-product-card w-full">
+                <a href="{{ product.url }}" class="platter-product-image relative block w-full aspect-square mb-2 rounded-3xl border border-black overflow-hidden">
+                  {% if badge_enabled %}
+                    <div class="platter-product-badge absolute top-2 left-2 z-20">
+                      <span class="block uppercase px-2 py-1 text-xs sm:text-xl rounded-4xl border border-black font-black text-black bg-white">Badge</span>
+                    </div>
+                  {% endif %}
+                  {% if savings_enabled %}
+                    <div class="platter-product-savings absolute top-2 right-2 z-20">
+                      <span class="block uppercase px-2 py-1 text-xs sm:text-xl rounded-4xl border border-black font-black text-white bg-green-600">Savings</span>
+                    </div>
+                  {% endif %}
+                  {% for image in product.images %}                  
+                    <img loading="lazy" class="absolute object-cover w-full h-full transition-all {% if forloop.first %}z-10{% endif %} {% if product.images.size > 1 %}hover:opacity-0{% endif %}" src="{{ image | image_url: width: 1000 }}" alt="{{ product.title }}" width="100" height="100">
+                  {% endfor %}
+                </a>
+                <div class="platter-product-info w-full px-4">
+                  <a href="{{ product.url }}">
+                    <h3 class="font-sans font-black uppercase text-black -indent-1 leading-tight">
+                      {{ product.title }}
+                    </h3>
+                  </a>
+                  {% if reviews_enabled %}
+                    <div class="platter-product-reviews">
+                      <span class="block leading-tight">Reviews</span>
+                    </div>
+                  {% endif %}
+                  <span class="font-bold">{{ product.price | money }}</span>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <div class="platter-scrollbar hidden sm:block w-full mx-auto dynamic-padding -translate-y-1 overflow-visible">
+          <div class="js-scrollbar-track platter-scrollbar-track w-full h-1 rounded-2xl bg-gray-400 overflow-visible">
+            <button class="js-scrollbar-thumb platter-scrollbar-thumb block appearance-none h-1 rounded-2xl hover:scale-y-175 focus:scale-y-175 bg-black cursor-pointer">
+              <span class="invisible">Scroll Thumb for Carousel</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div class="platter-footer w-full px-8">
+      <button class="js-toggle-button relative z-20 flex sm:hidden justify-center items-center w-full px-2 py-3 text-white rounded-4xl bg-black">Show More</button>
+    </div>
+  </div>
 </section>
 
 {% schema %}

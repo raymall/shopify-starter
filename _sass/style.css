@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+@media all and (min-width: 87.5rem) {
+  .dynamic-padding {
+    padding-left: calc((100vw - 140rem) / 2);
+    padding-right: calc((100vw - 140rem) / 2);
+  }
+}

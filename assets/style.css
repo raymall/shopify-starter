@@ -299,9 +299,6 @@
   .grid-rows-\[1fr_1fr_0fr_0fr_0fr\] {
     grid-template-rows: 1fr 1fr 0fr 0fr 0fr;
   }
-  .grid-rows-\[1fr_1fr_1fr_1fr_1fr\] {
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  }
   .flex-wrap {
     flex-wrap: wrap;
   }
@@ -528,6 +525,12 @@
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
     }
+  }
+}
+@media all and (min-width: 87.5rem) {
+  .dynamic-padding {
+    padding-left: calc((100vw - 140rem) / 2);
+    padding-right: calc((100vw - 140rem) / 2);
   }
 }
 @property --tw-translate-x {
