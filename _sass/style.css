@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.no-select {
+  user-select: none;
+}
+
 @media all and (min-width: 87.5rem) {
   .dynamic-padding {
     padding-left: calc((100vw - 140rem) / 2);
