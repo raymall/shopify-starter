@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "source": "src/index.html",
   "scripts": {
+    "dev": "shopify theme dev --store ray-playground & npx tailwindcss -i ./_sass/styles.scss -o ./assets/style.css --watch",
     "start": "parcel",
     "build": "parcel build"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.4"
+  },
   "devDependencies": {
-    "parcel": "^2.14.0"
+    "@tailwindcss/postcss": "^4.1.4",
+    "parcel": "^2.14.0",
+    "tailwindcss": "^4.1.4"
   }
 }
