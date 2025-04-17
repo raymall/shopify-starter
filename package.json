@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "source": "src/index.html",
   "scripts": {
-    "dev": "shopify theme dev --store ray-playground & npx tailwindcss -i ./_sass/styles.scss -o ./assets/style.css --watch",
     "start": "parcel",
     "build": "parcel build"
   },
